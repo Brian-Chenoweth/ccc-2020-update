@@ -1,0 +1,82 @@
+#homepage-programs-wrap {
+    margin: 6rem 0;
+    text-align: center;
+
+    @include phone {
+        margin: 4rem 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #0B8B6D;
+        margin: 5rem 0;
+
+        @include phone {
+            margin-top: 0;
+            margin-bottom: 4rem;
+        }
+    }
+
+    #homepage-programs {
+        display: flex;
+        justify-content: space-between;
+
+        .program {
+
+            &-1,
+            &-2,
+            &-3 {
+                flex: 0 0 32%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+                a.program-link {
+                    font-size: 2rem;
+                    margin: 0 0 1em;
+                    flex: 2;
+                    span {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                p {
+                    margin: 1em 0 1em;
+                    line-height: 2.5rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
+        }
+
+        @include phone {
+            flex-direction: column;
+
+            .program {
+
+                &-1,
+                &-2,
+                &-3 {
+                    margin: 0 0 5rem 0;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    a.btn {
+        margin-top: 5rem;
+
+        @include phone {
+            margin-top: 0;
+        }
+    }
+}

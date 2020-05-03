@@ -1,0 +1,1 @@
+/Users/brianchenoweth/Sites/ccc/wp-content/plugins/query-monitor/wp-content/db.php

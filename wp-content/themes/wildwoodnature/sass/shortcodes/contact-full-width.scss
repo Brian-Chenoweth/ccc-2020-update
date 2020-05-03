@@ -1,0 +1,118 @@
+.full-width.contact-us-wrap {
+    background: linear-gradient(rgba(67, 67, 67, 0.67),
+        rgba(67, 67, 67, 0.67)), url('/wp-content/themes/wildwoodnature/img/leaves-bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    min-height: rem-calc(500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 25px;
+
+    form {
+        .wpcf7-validation-errors {
+            color: red;
+            font-size: 20px;
+        }
+
+        p {
+            margin: 0;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .wpcf7-not-valid,
+        div.wpcf7-validation-errors {
+            border: 2px solid red;
+        }
+
+        .wpcf7-mail-sent-ok {
+            font-size: 20px;
+            color: #0B8B6D;
+        }
+    }
+
+    @include phone {
+        padding: 25px 15px;
+        min-height: 0;
+    }
+
+    .contact-us {
+        width: 117rem;
+        padding: rem-calc(25);
+        background-color: rgba(255, 255, 255, .67);
+        border: 1px solid rgba(112, 112, 112, .67);
+
+        h2 {
+            margin: 0 0 1.5rem;
+            color: $green;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                max-width: none;
+            }
+
+            input,
+            textarea {
+                margin: .5em 0;
+
+                @include phone {
+                    margin: .25em 0;
+                }
+            }
+
+            input:not([type="submit"]) {
+                @include phone {
+                    height: 35px;
+                }
+            }
+
+            input:not([type="submit"]),
+            textarea {
+                padding: 10px;
+                background-color: #EDEDED;
+
+                &::placeholder {
+                    color: #9B9B9B;
+                    font-style: italic;
+                    font-size: rem-calc(12);
+                }
+            }
+
+            input[type="submit"] {
+                color: white;
+                font-size: rem-calc(16);
+
+                &:hover {
+                    background-color: darken(#0B8B6D, 15%);
+                }
+            }
+
+            input {
+                height: 45px;
+
+            }
+
+            textarea {
+                height: rem-calc(125);
+                resize: none;
+
+                @include phone {
+                    height: 65px;
+                }
+            }
+
+
+        }
+
+
+    }
+
+}

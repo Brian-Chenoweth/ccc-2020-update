@@ -1,0 +1,60 @@
+a {
+    color: $color__link;
+    font-family: 'Poppins', sans-serif;
+
+    &:visited {
+        color: $color__link-visited;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color__link-hover;
+        // color: lighten($green, 10%);
+    }
+
+    &:focus {
+        outline: thin dotted;
+    }
+
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+}
+
+a.btn, .btn {
+    color: $white;
+    background-color: $green;
+    border-radius: 0;
+    padding: rem-calc(15 35);
+    // margin: 0 auto;
+
+    &.secondary {
+        color: $green;
+        background-color: $white;
+        transition: all .5s;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transition: all .5s;
+            background-color: $green;
+            color: $white;
+            border: 1px solid $white;
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        transition: all .3s;
+        background-color: lighten($green, 10%);
+        color: $white;
+    }
+
+    @include phone {
+        width: 100%;
+        font-size: rem-calc(20);
+    }
+}

@@ -1,0 +1,13 @@
+@function wide ($col) {
+    @return 100% / $col;
+}
+
+// spans 2 columns, width = 50%;
+// .span-two {
+//     width: wide(2);
+// }
+
+// spans 3 columns, width = 33.3%
+// .span-three {
+//     width: wide(3);
+// }

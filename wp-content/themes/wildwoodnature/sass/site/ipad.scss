@@ -1,0 +1,50 @@
+@media (max-width: 1024px) {
+
+    header {
+        .header-top {
+            div.header-top-left {
+                flex-direction: column;
+                flex: 55%;
+                text-align: right;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    #homepage-banner-wrap {
+        #homepage-banner {
+
+            p,
+            h1 {
+                max-width: 100%;
+            }
+        }
+    }
+
+
+    #homepage-programs-wrap {
+        #homepage-programs {
+
+            .program-1,
+            .program-2,
+            .program-3 {
+                a.program-link {
+                    flex: none;
+
+                    span,
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    header .site-branding {
+        // flex-direction: column;
+        // align-items: flex-start;
+    }
+}

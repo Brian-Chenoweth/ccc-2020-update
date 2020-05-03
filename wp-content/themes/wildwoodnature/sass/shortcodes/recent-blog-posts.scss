@@ -1,0 +1,119 @@
+h2#latest-posts {
+    text-align: center;
+    color: $green;
+    margin-top: rem-calc(50);
+
+    @include phone {
+        margin: 4rem 0;
+    }
+}
+
+#homepage-posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: rem-calc(50 0);
+
+    @include phone {
+        height: auto;
+        margin: rem-calc(25 0);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 32%;
+        margin: rem-calc(0 0 50 0);
+        padding: 0;
+        height: rem-calc(480);
+
+        @include phone {
+            width: 100%;
+            height: auto;
+            margin: rem-calc(0 0 20 0);
+        }
+
+
+        li {
+            list-style-type: none;
+            margin: 0;
+
+            @include phone {
+                margin: rem-calc(10 0);
+            }
+
+            a {
+                font-size: rem-calc(18);
+            }
+
+            &:first-of-type {
+                display: flex;
+                max-height: rem-calc(250);
+
+                // @include desktop {
+                //     height: rem-calc(250);
+                // }
+
+                @media (min-width: 1200px) {
+                    flex: 2;
+                }
+
+
+                a {
+
+                    @media (min-width: 1200px) {
+                        display: flex;
+                    }
+
+                    @include tablet-down {
+                        display: block;
+                    }
+                }
+
+                @include tablet {
+                    max-height: none;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                }
+
+                @include phone {
+                    max-height: none;
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                }
+
+            }
+
+            &:nth-child(2) {
+                font-style: italic;
+            }
+
+            &:nth-child(3) {
+                flex-basis: 12%;
+            }
+
+            &:nth-child(4) {
+                line-height: rem-calc(25);
+            }
+
+        }
+
+    }
+
+    a.btn {
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,61 @@
+#homepage-banner-wrap {
+    background-image: url('/wp-content/themes/wildwoodnature/img/wildwood-hero.png');
+    // height: rem-calc(700);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    // z-index: -9;
+
+    #homepage-banner {
+        max-width: 117rem;
+        margin: 0 auto;
+        padding: 10rem 1.5rem 10rem;
+        z-index: -9;
+
+        a.btn {
+            z-index: 999999;
+        }
+
+        h1 {
+            color: white;
+            max-width: 63%;
+            margin: 2.5rem 0;
+            letter-spacing: rem-calc(1);
+            margin-top: 0;
+        }
+
+        p {
+            color: white;
+            font-weight: 100;
+            max-width: 45%;
+            line-height: rem-calc(30);
+            margin: 2.5rem 0;
+            padding-left: 0;
+        }
+
+    }
+
+    @include phone {
+        height: auto;
+
+
+        #homepage-banner {
+            padding: 4rem 15px;
+
+            h1,
+            p {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: rem-calc(26);
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+body.container {
+    margin-top: 40px;
+}
