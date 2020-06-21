@@ -1,4 +1,4 @@
-var themename = 'brain';
+var themename = 'ccc';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
@@ -58,7 +58,7 @@ gulp.task('javascript', function() {
 gulp.task('watch', function() {
 	browserSync.init({ 
 		open: 'external',
-		proxy: 'brainmedia:8889',
+		proxy: 'ccc:8888',
 		port: 8889
 	});
 	gulp.watch([root + '**/*.css', root + '**/*.scss' ], ['css']);

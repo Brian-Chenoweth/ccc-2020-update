@@ -1,0 +1,21 @@
+
+@import "headings";
+
+@import "copy";
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    color: $color__text-main;
+    font-family: $font__serif;
+    @include font-size(.9);
+    line-height: $font__line-height-body;
+
+    @include breakpoints(large) {
+      @include font-size(1);
+      // font-size: rem-calc(20);
+  }
+  
+}

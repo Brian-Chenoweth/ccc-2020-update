@@ -1,0 +1,16 @@
+[15-Jan-2020 04:36:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/brainme5/public_html/wp-content/themes/brain/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home4/brainme5/public_html/wp-content/themes/brain/index.php on line 15
+[09-Mar-2020 11:33:49 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/brainme5/public_html/wp-content/themes/brain/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home4/brainme5/public_html/wp-content/themes/brain/index.php on line 15
+[09-Mar-2020 11:34:26 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/brainme5/public_html/wp-content/themes/brain/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home4/brainme5/public_html/wp-content/themes/brain/index.php on line 15
+[09-Mar-2020 11:35:09 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/brainme5/public_html/wp-content/themes/brain/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home4/brainme5/public_html/wp-content/themes/brain/index.php on line 15

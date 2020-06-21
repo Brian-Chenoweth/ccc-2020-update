@@ -1,0 +1,8 @@
+.site-content {
+    padding: 1em;
+
+    @include breakpoints(large) {
+        padding: 2em;
+    }
+
+}
