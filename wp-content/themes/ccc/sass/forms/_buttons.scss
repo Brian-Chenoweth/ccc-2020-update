@@ -1,19 +1,31 @@
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     border: 2px solid;
-    border-color: black;
+    // border-color: black;
     background: transparent;
     color: black;
     @include font-size(1);
     line-height: 1;
-    padding: .5em 1em;
+    padding: 1em 3em;
+    width: auto;
+    transition: all .4s;
 
-	&:hover,
-	&:active,
-	&:focus {
-		background: white;
-		color: black;
-	}
+    &.primary {
+        background-color: $blue;
+        border-color: $blue;
+        color: white;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: lighten($blue, 20%);
+        }
+    }
+
+
+
 }

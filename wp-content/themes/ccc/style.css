@@ -621,32 +621,47 @@ td:last-child {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid;
-	border-color: black;
 	background: transparent;
 	color: black;
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1;
-	padding: .5em 1em;
+	padding: 1em 3em;
+	width: auto;
+	transition: all .4s;
 }
 
-button:hover, button:active, button:focus,
-input[type="button"]:hover,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	background: white;
-	color: black;
+.button.primary,
+button.primary,
+input[type="button"].primary,
+input[type="reset"].primary,
+input[type="submit"].primary {
+	background-color: #2a509b;
+	border-color: #2a509b;
+	color: white;
+	text-decoration: none;
+}
+
+.button.primary:hover, .button.primary:active, .button.primary:focus,
+button.primary:hover,
+button.primary:active,
+button.primary:focus,
+input[type="button"].primary:hover,
+input[type="button"].primary:active,
+input[type="button"].primary:focus,
+input[type="reset"].primary:hover,
+input[type="reset"].primary:active,
+input[type="reset"].primary:focus,
+input[type="submit"].primary:hover,
+input[type="submit"].primary:active,
+input[type="submit"].primary:focus {
+	background-color: #5982d2;
 }
 
 input[type="text"],
@@ -1199,12 +1214,6 @@ button.dropdown-toggle {
 	margin: 0 auto;
 }
 
-@media all and (min-width: 1025px) {
-	.site-header {
-		padding: 1em 2em;
-	}
-}
-
 .site-branding {
 	min-height: 65px;
 	display: -ms-flexbox;
@@ -1305,6 +1314,179 @@ button.dropdown-toggle {
 
 .social-menu ul a:hover, .social-menu ul a:focus {
 	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+## Front Page
+--------------------------------------------------------------*/
+.home .slideshow-container .content-wrap {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.home .slideshow-container .content {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: start;
+	    justify-content: start;
+	-ms-flex-align: start;
+	    align-items: flex-start;
+	top: 10%;
+	position: absolute;
+	max-width: 650px;
+	padding: 1em;
+}
+
+.home .slideshow-container .content h1,
+.home .slideshow-container .content p,
+.home .slideshow-container .content a {
+	color: white;
+}
+
+.home .site-content {
+	padding: 0;
+}
+
+.home #slide-first-element {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.home #slide-element-2,
+.home #slide-element-3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.home .slide-image {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.home .slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+.home #slide-first-element {
+	animation: fade-1 13s infinite;
+	-webkit-animation: fade-1 13s infinite;
+}
+
+.home #slide-element-2 {
+	animation: fade-2 13s infinite;
+	-webkit-animation: fade-2 13s infinite;
+}
+
+.home #slide-element-3 {
+	animation: fade-3 13s infinite;
+	-webkit-animation: fade-3 13s infinite;
+}
+
+@keyframes fade-1 {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-2 {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-3 {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.home .homepage-programs-wrap {
+	max-width: 1300px;
+	margin: 50px auto;
+	padding: 0 1em;
+}
+
+.home .homepage-programs-wrap .homepage-programs {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+}
+
+.home .homepage-programs-wrap .homepage-programs .image-wrap {
+	height: 270px;
+	width: auto;
+	background-repeat: no-repeat;
+	border: 10px solid #2a509b;
+}
+
+.home .homepage-programs-wrap .homepage-programs .image-wrap .image {
+	background-size: cover;
+	min-height: 1px;
+	height: 100%;
+	width: 100%;
+	transition: all .4s;
+}
+
+.home .homepage-programs-wrap .homepage-programs .image-wrap .image:hover {
+	cursor: pointer;
+	transform: scale(1.11);
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-1 .image-wrap .image {
+	background-image: url(https://placebear.com/270/270);
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-2 .image-wrap .image {
+	background-image: url(https://www.placecage.com/270/270);
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-3 .image-wrap .image {
+	background-image: url(https://picsum.photos/270/270);
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-4 .image-wrap .image {
+	background-image: url(https://baconmockup.com/270/270);
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-wrap {
+	width: 24%;
 }
 
 /*--------------------------------------------------------------

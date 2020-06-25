@@ -1,0 +1,147 @@
+.home {
+
+    .slideshow-container {
+        .content-wrap {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            top: 10%;
+            position: absolute;
+            max-width: 650px;
+            padding: 1em;
+
+            h1,
+            p,
+            a {color: white;}
+
+        }
+    }
+
+    .site-content {padding: 0;}
+
+    #slide-first-element {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #slide-element-2,
+    #slide-element-3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .slide-image {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+    }
+
+    #slide-first-element {
+        animation: fade-1 13s infinite;
+        -webkit-animation: fade-1 13s infinite;
+    }
+
+    #slide-element-2 {
+        animation: fade-2 13s infinite;
+        -webkit-animation: fade-2 13s infinite;
+    }
+
+    #slide-element-3 {
+        animation: fade-3 13s infinite;
+        -webkit-animation: fade-3 13s infinite;
+    }
+
+    @keyframes fade-1 {
+        0% {opacity: 1;}
+
+        33% {opacity: 0;}
+
+        66% {opacity: 0;}
+
+        100% {opacity: 1;}
+    }
+
+    @keyframes fade-2 {
+        0% {opacity: 0;}
+
+        33% {opacity: 1;}
+
+        66% {opacity: 0;}
+
+        100% {opacity: 0;}
+    }
+
+    @keyframes fade-3 {
+        0% {opacity: 0;}
+
+        33% {opacity: 0;}
+
+        66% {opacity: 1;}
+
+        100% {opacity: 0;}
+    }
+
+
+
+
+    .homepage-programs-wrap {
+        max-width: 1300px;
+        margin: 50px auto;
+        padding: 0 1em;
+
+        .homepage-programs {
+            display: flex;
+            justify-content: space-between;
+
+            .image-wrap {
+                height: 270px;
+                width: auto;
+                background-repeat: no-repeat;
+                border: 10px solid $blue;
+
+                .image {
+                    background-size: cover;
+                    min-height: 1px;
+                    height: 100%;
+                    width: 100%;
+                    transition: all .4s;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.11);
+                    }
+                }
+
+            }
+
+            .program-1 {.image-wrap {.image {background-image: url(https://placebear.com/270/270);}}}
+
+            .program-2 {.image-wrap {.image {background-image: url(https://www.placecage.com/270/270);}}}
+
+            .program-3 {.image-wrap {.image {background-image: url(https://picsum.photos/270/270);}}}
+
+            .program-4 {.image-wrap {.image {background-image: url(https://baconmockup.com/270/270);}}}
+
+            .program-wrap {width: 24%;}
+
+        }
+    }
+
+
+}

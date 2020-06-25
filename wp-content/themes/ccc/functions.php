@@ -201,3 +201,29 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+
+
+//CPTs
+// Our custom post type function
+function create_posttype_programs() {
+ 
+    register_post_type( 'programs',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Programs' ),
+                'singular_name' => __( 'Program' )
+			),
+			'description' => 'Programs offered by CCC',
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'programs'),
+            'show_in_rest' => true,
+ 
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype_programs' );
