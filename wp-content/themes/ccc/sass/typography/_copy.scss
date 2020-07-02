@@ -20,11 +20,11 @@ blockquote {
         position: absolute;
         top: -.05em;
         left: -.14em;
-		content: "“";
-		font-family: $font__sans;
-		font-size: 12em;
-		line-height: 100%;
-		color: white;
+        content: "“";
+        font-family: $font__sans;
+        font-size: 12em;
+        line-height: 100%;
+        color: white;
     }
 }
 
@@ -65,4 +65,11 @@ ins {
 
 big {
     font-size: 125%;
+}
+
+
+a {
+    color: $blue;
+    text-decoration: none;
+    font-weight: 600;
 }

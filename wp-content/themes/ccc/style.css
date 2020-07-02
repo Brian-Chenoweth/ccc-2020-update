@@ -42,6 +42,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+a {
+	transition: all .4s;
+}
+
 /* Breakpoint Mixin Examples
  *
  * SCSS example syntax for using the breakpoints mixin
@@ -486,6 +490,12 @@ big {
 	font-size: 125%;
 }
 
+a {
+	color: #2a509b;
+	text-decoration: none;
+	font-weight: 600;
+}
+
 body,
 button,
 input,
@@ -493,7 +503,7 @@ select,
 optgroup,
 textarea {
 	color: #000;
-	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Geneva", Arial, sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -635,6 +645,8 @@ input[type="submit"] {
 	padding: 1em 3em;
 	width: auto;
 	transition: all .4s;
+	display: block;
+	text-align: center;
 }
 
 .button.primary,
@@ -720,15 +732,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #000;
+	color: #2a509b;
 }
 
 a:visited {
-	color: #000;
+	color: #2a509b;
 }
 
 a:hover, a:focus, a:active {
-	color: #b51c35;
+	color: #5076C1;
 }
 
 a:focus {
@@ -744,7 +756,7 @@ a:hover, a:active {
 .entry-summary a,
 .comment-content a {
 	text-decoration: none;
-	border-bottom: 3px solid #b51c35;
+	border-bottom: 3px solid #5076C1;
 }
 
 .page-content a:focus, .page-content a:hover,
@@ -754,7 +766,7 @@ a:hover, a:active {
 .entry-summary a:hover,
 .comment-content a:focus,
 .comment-content a:hover {
-	color: #b51c35;
+	color: #5076C1;
 }
 
 /*--------------------------------------------------------------
@@ -1011,8 +1023,8 @@ button.dropdown-toggle {
 .paging-navigation a:hover,
 .paging-navigation a:focus {
 	color: white;
-	border-color: #b51c35;
-	background: #b51c35;
+	border-color: #5076C1;
+	background: #5076C1;
 }
 
 .nav-links {
@@ -1071,7 +1083,7 @@ button.dropdown-toggle {
 .post-navigation .post-title {
 	font-size: 1.2em;
 	font-weight: 700;
-	border-bottom: 3px solid #b51c35;
+	border-bottom: 3px solid #5076C1;
 }
 
 .post-navigation a:hover .post-title,
@@ -1443,10 +1455,10 @@ button.dropdown-toggle {
 }
 
 .home .homepage-programs-wrap .homepage-programs {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: justify;
-	    justify-content: space-between;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr 1fr 1fr;
+	    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .home .homepage-programs-wrap .homepage-programs .image-wrap {
@@ -1486,7 +1498,41 @@ button.dropdown-toggle {
 }
 
 .home .homepage-programs-wrap .homepage-programs .program-wrap {
-	width: 24%;
+	width: 97%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: 270px 1fr 2fr 1fr;
+	    grid-template-rows: 270px 1fr 2fr 1fr;
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-heading {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 15px 0;
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-wrap p:not(.program-heading) {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-wrap .read-more {
+	margin-top: 10px;
+}
+
+.home .homepage-programs-wrap .homepage-programs .program-wrap .button.primary {
+	margin-top: 10px;
+}
+
+.home-testimonials-wrap {
+	min-height: 300px;
+	background-color: #2a509b;
+	margin: 50px 0;
+}
+
+.home-testimonials-wrap .home-testimonials {
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -1508,11 +1554,11 @@ button.dropdown-toggle {
 .cat-links a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #b51c35;
+	color: #5076C1;
 }
 
 .cat-links a:focus, .cat-links a:hover {
-	background-color: #b51c35;
+	background-color: #5076C1;
 	color: white;
 }
 
@@ -1538,7 +1584,7 @@ button.dropdown-toggle {
 }
 
 .entry-title a:focus, .entry-title a:hover {
-	border-bottom: 5px solid #b51c35;
+	border-bottom: 5px solid #5076C1;
 }
 
 .entry-meta {
@@ -1552,7 +1598,7 @@ button.dropdown-toggle {
 }
 
 .entry-meta a:focus, .entry-meta a:hover {
-	border-bottom: 3px solid #b51c35;
+	border-bottom: 3px solid #5076C1;
 }
 
 .byline:after {

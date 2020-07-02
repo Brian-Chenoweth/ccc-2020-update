@@ -34,27 +34,41 @@ get_header();
 			</div>
 			<p class="program-heading">Young Toddler</p>
 			<p>Lorem ipsum dolor sit amet dolore possimus vitae, reiciendis debitis autem nisi rem doloribus temporibus.</p>
+			<a href="" class="button primary">Read More</a>
 		</div>
 		<div class="program-wrap program-2">
 			<div class="image-wrap"><div class="image"></div>
 			</div>
 			<p class="program-heading">Early Years</p>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloribus temporibus neque voluptatem veniam a quis hic.</p>
+			<a href="" class="button primary">Read More</a>
 		</div>
 		<div class="program-wrap program-3">
 			<div class="image-wrap"><div class="image"></div>
 			</div>
 			<p class="program-heading">Preschool Program</p>
 			<p>Taniam a quis hic, laboriosam corporis consequatur blanditiis. Ipsam dolore possimus vitae, reiciendis debitis autem nisi rem.</p>
+			<a href="" class="button primary">Read More</a>
 		</div>
 		<div class="program-wrap program-4">
 			<div class="image-wrap"><div class="image"></div>
 			</div>
 			<p class="program-heading">Kindergarten Readiness</p>
 			<p>Laboriosam corporis consequatur blanditiis. Ipsam dolore possimus vitae, reiciendis debitis autem nisi rem.</p>
+			<a href="" class="button primary">Read More</a>
 		</div>
 
 	</div>
+</div>
+
+<div class="home-testimonials-wrap">
+
+	<div class="home-testimonials">
+
+		
+
+	</div>
+
 </div>
 
 <?php
