@@ -53,6 +53,7 @@
         text-decoration: none;
         // color: #fff;
         font-weight: 600;
+        color: black;
     }
 
 }
@@ -205,7 +206,8 @@ button.dropdown-toggle {
     color: $blue;
 }
 
-.nav li.current_page_item>a {
+.nav li.current_page_item>a,
+.nav li.current-menu-ancestor>a {
     color: $blue;
 }
 
@@ -216,11 +218,9 @@ button.dropdown-toggle {
     left: 0;
     background-color: #FFF;
     border-bottom: 5px solid $blue;
-    // color: $blue;
     -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
     -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
-    /* display: none;*/
     transform: scaleY(0);
     transform-origin: 0 0 0;
     transition: all 0.3s ease 0s;
@@ -248,4 +248,43 @@ button.dropdown-toggle {
 
 .nav li ul li a:hover {
     color: $blue;
+}
+
+.search-field,
+input[type="submit"].type-submit {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.search-field {
+    bottom: 7px;
+    right: 0;
+    position: absolute;
+    transition: all .4s;
+}
+
+// input[type="submit"].search-submit {
+//     padding: 0;
+// }
+
+input[type="button"].search-submit,
+input[type="submit"].search-submit {
+    padding: 5px 15px;
+    background-image: url('/wp-content/themes/ccc/images/svg/search.svg');
+    background-size: 25px auto;
+    border: 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 25px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

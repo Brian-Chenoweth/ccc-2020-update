@@ -56,6 +56,20 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+
+<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<label>
+		<span class="screen-reader-text"></span>
+		<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentytwenty' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	</label>
+	<input type="button" class="type-button search-submit" value="<?php echo esc_attr_x( '', 'submit button', 'twentytwenty' ); ?>" />
+	<input type="submit" class="type-submit search-submit" value="<?php echo esc_attr_x( '', 'submit button', 'twentytwenty' ); ?>" />
+	
+</form>
+
+
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

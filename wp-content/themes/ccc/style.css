@@ -824,6 +824,7 @@ a:hover, a:active {
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
 	font-weight: 600;
+	color: black;
 }
 
 button.dropdown-toggle {
@@ -949,7 +950,8 @@ button.dropdown-toggle {
 	color: #2a509b;
 }
 
-.nav li.current_page_item > a {
+.nav li.current_page_item > a,
+.nav li.current-menu-ancestor > a {
 	color: #2a509b;
 }
 
@@ -961,7 +963,6 @@ button.dropdown-toggle {
 	background-color: #FFF;
 	border-bottom: 5px solid #2a509b;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
-	/* display: none;*/
 	transform: scaleY(0);
 	transform-origin: 0 0 0;
 	transition: all 0.3s ease 0s;
@@ -988,6 +989,44 @@ button.dropdown-toggle {
 
 .nav li ul li a:hover {
 	color: #2a509b;
+}
+
+.search-field,
+input[type="submit"].type-submit {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.search-field {
+	bottom: 7px;
+	right: 0;
+	position: absolute;
+	transition: all .4s;
+}
+
+input[type="button"].search-submit,
+input[type="submit"].search-submit {
+	padding: 5px 15px;
+	background-image: url("/wp-content/themes/ccc/images/svg/search.svg");
+	background-size: 25px auto;
+	border: 0;
+	background-repeat: no-repeat;
+	position: absolute;
+	margin-left: 25px;
+}
+
+input[type="button"].search-submit:hover,
+input[type="submit"].search-submit:hover {
+	cursor: pointer;
+}
+
+.search-form {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -1218,7 +1257,7 @@ button.dropdown-toggle {
 
 .site-header {
 	position: relative;
-	padding: 1em;
+	padding: 1.5em 1em;
 	font-family: "Raleway", sans-serif;
 	color: #fff;
 	background-color: #fff;
