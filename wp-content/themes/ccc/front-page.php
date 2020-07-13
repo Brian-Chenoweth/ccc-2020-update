@@ -29,34 +29,37 @@ get_header();
 <div class="homepage-programs-wrap">
 	<div class="homepage-programs">
 
+
+		<?php 
+
+		$args = array( 
+		'orderby'   => 'date',
+		'order' => 'ASC',
+		'post_type' => 'programs',
+		);
+		$the_query = new WP_Query( $args );
+		$thumb_id = get_post_thumbnail_id();
+		$i=0;
+
+		?>
+
+		<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
+		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'thumbnail_size' );
+		$imageurl = $src[0];
+		$i++;
+		?>
+
 		<div class="program-wrap program-1">
-			<div class="image-wrap"><div class="image"></div>
-			</div>
-			<p class="program-heading">Young Toddler</p>
-			<p>Lorem ipsum dolor sit amet dolore possimus vitae, reiciendis debitis autem nisi rem doloribus temporibus.</p>
-			<a href="" class="button primary">Read More</a>
+			<div class="image-wrap"><div class="image" style="background-image:url('<?= $imageurl;?>');"></div></div>
+			<p class="program-heading"><?php the_title();?></p>
+			<?php the_excerpt() ?>
+			<a href="<?php the_permalink();?>" class="button primary">Read More</a>
 		</div>
-		<div class="program-wrap program-2">
-			<div class="image-wrap"><div class="image"></div>
-			</div>
-			<p class="program-heading">Early Years</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloribus temporibus neque voluptatem veniam a quis hic.</p>
-			<a href="" class="button primary">Read More</a>
-		</div>
-		<div class="program-wrap program-3">
-			<div class="image-wrap"><div class="image"></div>
-			</div>
-			<p class="program-heading">Preschool Program</p>
-			<p>Taniam a quis hic, laboriosam corporis consequatur blanditiis. Ipsam dolore possimus vitae, reiciendis debitis autem nisi rem.</p>
-			<a href="" class="button primary">Read More</a>
-		</div>
-		<div class="program-wrap program-4">
-			<div class="image-wrap"><div class="image"></div>
-			</div>
-			<p class="program-heading">Kindergarten Readiness</p>
-			<p>Laboriosam corporis consequatur blanditiis. Ipsam dolore possimus vitae, reiciendis debitis autem nisi rem.</p>
-			<a href="" class="button primary">Read More</a>
-		</div>
+
+		<?php endwhile;?> <?php endif; ?>
+		<?php wp_reset_query(); ?>
+
+		
 
 	</div>
 </div>
