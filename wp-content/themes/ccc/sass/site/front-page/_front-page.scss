@@ -227,12 +227,53 @@
 }
 
 .home-testimonials-wrap {
-    min-height: 300px;
+    min-height: 420px;
     background-color: $blue;
     margin: 50px 0;
 
+
+
     .home-testimonials {
         max-width: 1300px;
+        min-height: 420px;
         margin: 0 auto;
+        background: $blue url('/wp-content/themes/ccc/images/kid-red.png');
+        background-repeat: no-repeat;
+        background-size: auto 90%;
+        background-position: 98% center;
+        padding: 2em 0;
+        color: white;
+        text-align: center;
+
+        // .slider {
+        //     margin-bottom: 2em;
+        // }
+
+        h2 {
+            // margin-top: 0;
+        }
+
+        .bx-wrapper {
+            box-shadow: 0 0 0 #ccc;
+            border: 0px solid #fff;
+            background: transparent;
+
+        }
+
+        .bx-wrapper {
+            max-width: 65% !important;
+            margin: 0 auto;
+
+            .bx-viewport {
+                padding-bottom: 1em;
+            }
+
+            .bx-pager {
+                padding-bottom: 20px;
+            }
+        }
+
+
+
     }
 }

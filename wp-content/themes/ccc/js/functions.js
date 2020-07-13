@@ -11,8 +11,12 @@
         $('.type-button').css("opacity", "0");
         $('.type-button').css("visibility", "hidden");
     });
-
+    
+    $(document).ready(function () {
+        $('.slider').bxSlider({
+            auto: true
+            // pager: false
+        });
+    });
 
 })(jQuery);
-
-

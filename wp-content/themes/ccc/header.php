@@ -18,6 +18,49 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+<?php if (is_front_page()): ?>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Columbia Children's Center",
+  "image": "https://www.columbiachildrenscenter.com/wp-content/uploads/2020/06/logo.png",
+  "@id": "",
+  "url": "https://www.columbiachildrenscenter.com/",
+  "telephone": "(805) 922-5437",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "840 E Stowell Rd,",
+    "addressLocality": "Santa Maria",
+    "addressRegion": "CA",
+    "postalCode": "93454",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.9381376,
+    "longitude": -120.4231148
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "07:00",
+    "closes": "17:30"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Columbia-Childrens-Center-149240848454100/",
+    "https://www.instagram.com/columbia.childrens.center/",
+    "https://www.youtube.com/channel/UCuiYJs5_KCclYcsqL10WHYA"
+  ]
+}
+</script>
+<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>

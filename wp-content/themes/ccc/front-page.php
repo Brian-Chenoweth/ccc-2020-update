@@ -64,8 +64,23 @@ get_header();
 <div class="home-testimonials-wrap">
 
 	<div class="home-testimonials">
+	
+		<h2>Hear what others are saying</h2>
 
-		
+		<div class="slider">
+			
+			<div class="slide slide-1">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt ipsam aperiam voluptas rerum deserunt eius voluptates doloribus porro illum eveniet, molestias asperiores reiciendis itaque pariatur quam aliquid autem, amet dolor.</p>
+				<cite>- Cite</cite>
+			</div>
+
+			
+			<div class="slide slide-2">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore maxime soluta voluptatem quae debitis, sequi minus quas temporibus. Quae earum qui laudantium iure quas similique reiciendis eligendi dolor facere nesciunt.</p>
+				<cite>- Another Cite</cite>
+			</div>
+
+		</div>
 
 	</div>
 
