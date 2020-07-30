@@ -13,10 +13,38 @@
     });
     
     $(document).ready(function () {
-        $('.slider').bxSlider({
-            auto: true
-            // pager: false
+
+        $('.slider').slick({
+            prevArrow: $('.prev1'),
+            nextArrow: $('.next1'),
+            autoplay: true,
+            autoplaySpeed: 5000
         });
+
+        $('#home-blog').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+        });
+
+        $('ul.post').hover(
+            function () { $(this).addClass('active') },
+            function () { $(this).removeClass('active') }
+        );
+
     });
+
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 200) {
+            $(".header-wrap").addClass("minified");
+        } else {
+            $(".header-wrap").removeClass("minified");
+        }
+    });
+
 
 })(jQuery);

@@ -157,6 +157,8 @@ function brain_scripts() {
 
 	wp_enqueue_script( 'brain-bx', get_template_directory_uri() . '/js/jquery.bxslider.js', array('jquery'), '20200405', true );
 
+	wp_enqueue_script( 'brain-slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '20200405', true );
+
 
 	wp_localize_script('brain-navigation', 'brainScreenReaderText', array(
 		'expand' => __('Expand Child Menu', 'brain'),
@@ -206,6 +208,17 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 
+function wpdocs_custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+function excerpt_readmore($more) {
+return '...';
+}
+
+add_filter('excerpt_more', 'excerpt_readmore');
 
 /*
 * Creating a function to create our CPT
@@ -272,3 +285,41 @@ function custom_post_type() {
 */
  
 add_action( 'init', 'custom_post_type', 0 );
+
+
+function get_recent_posts($atts) {
+	// $args = array( 'numberposts' => '4' );
+	$recent_posts = wp_get_recent_posts( $args );
+	$thumb_id = get_post_thumbnail_id();
+	$feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+
+	extract( shortcode_atts( array(
+		'class' => null,
+		'id' => null,
+		'numberposts' => '4',
+	), $atts ) );
+
+	$i = 0;
+	$counter = 0;
+
+		echo '<div id="'.$id.'">';
+			foreach( $recent_posts as $recent ){
+				$i++;
+				echo '<ul class="post post-'.$i.'">
+						<a href="' . get_permalink($recent["ID"]) . '"><li class="image-wrap"> <img src="'. wp_get_attachment_url( get_post_thumbnail_id($recent["ID"]) ) .'"></li></a>
+						<div class="content-wrap">
+						<li class="post-title"><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a></li> 
+						<a href="' . get_permalink($recent["ID"]) . '"><li class="excerpt"> '.get_the_excerpt($recent["ID"]).'</li></a>
+						<a href="' . get_permalink($recent["ID"]) . '"><li class="read-more"><a href="' . get_permalink($recent["ID"]) . '">' .'Details'.'</a></li></a>
+						</div>
+					</ul>';
+				$counter++;
+			}
+		echo '</div>';
+
+
+	wp_reset_query();
+
+}
+
+add_shortcode( 'get_recent_posts', 'get_recent_posts' );

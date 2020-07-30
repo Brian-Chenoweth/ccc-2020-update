@@ -73,6 +73,8 @@
 		</figure>
 	<?php endif; ?>
 
+
+<div class="header-wrap">
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -114,5 +116,6 @@
 
 
 	</header><!-- #masthead -->
+	</div><!-- .header-wrap -->
 
 	<div id="content" class="site-content">
